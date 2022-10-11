@@ -19,6 +19,7 @@ bool isFull();
 void enqueue(int);
 int dequeue();
 void tampil();
+void clear();
 
 int main() {
     //iniliasisasi queue antrian
@@ -51,12 +52,14 @@ int main() {
             tampil();
             break;
         case 4:
+            clear();
+        case 5:
             break;
         default:
             cout << "Pilihan tidak ditemukan! \n";
             break;
         }
-    } while (pilihan != 4);
+    } while (pilihan != 5);
 
     return 0;
 }
@@ -114,6 +117,11 @@ int dequeue() {
     return e;
 }
 
+void clear() {
+    antre.head = antre.tail = -1;
+    cout << "Data telah dibersihkan!\n";
+}
+
 void tampil() {
     if (!isEmpty()) {
         for (int i = antre.head; i <= antre.tail; i++) {
@@ -122,6 +130,6 @@ void tampil() {
         cout << "\n";
     }
     else {
-        cout << "data kosong\n";
+        cout << "Data kosong\n";
     }
 }
