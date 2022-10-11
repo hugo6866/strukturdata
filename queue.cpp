@@ -33,7 +33,8 @@ int main() {
         cout << "1. Masukan data kedalam queue (Enqueue)\n";
         cout << "2. Keluarkan data dari queue (Dequeue)\n";
         cout << "3. Tampilkan\n";
-        cout << "4. Keluar\n";
+        cout << "4. Clear data\n";
+        cout << "5. Keluar\n";
         cout << "Pilihan\t: ";
         int data = 0;
         cin >> pilihan;
