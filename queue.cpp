@@ -118,7 +118,7 @@ int dequeue() {
 }
 
 void clear() {
-    antre.head = antre.tail = -1;
+    create();
     cout << "Data telah dibersihkan!\n";
 }
 
