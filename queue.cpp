@@ -22,7 +22,7 @@ void tampil();
 void clear();
 
 int main() {
-    //iniliasisasi queue antrian
+    //inisialisasi queue antrian
     create();
     int pilihan = 0;
     do{
