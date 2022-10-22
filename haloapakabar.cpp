@@ -1,3 +1,6 @@
+/*
+A11.2021.13937
+*/
 #include <iostream>
 using namespace std;
 #define MAXSTACK 35
