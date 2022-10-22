@@ -1,5 +1,6 @@
 /*
 A11.2021.13937
+Hafizh Hugo Harman
 */
 #include <iostream>
 using namespace std;
@@ -52,7 +53,7 @@ void fixPesan(string text) {
 	while (sizePesan--) {
 		push(text[stackPenuh.top], stackpenuh);
 	}
-	while (!isEmpty(stackpenuh) && stackPenuh.data[stackPenuh.top] == '*') {
+	while (!isEmpty(stackpenuh) && (stackPenuh.data[stackPenuh.top] == '*' || !isAlphabet(stackPenuh.data[stackPenuh.top]))) {
 		//Pop dalam stack hanya bisa mengambil bagian atas dari stack
 		pop(stackpenuh);
 	}
