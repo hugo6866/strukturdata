@@ -56,10 +56,10 @@ void fixPesan(string text) {
 		//Pop dalam stack hanya bisa mengambil bagian atas dari stack
 		pop(stackpenuh);
 	}
-	int index = 1;
+
 	for (char ch : stackPenuh.data)
 	{
-		if (index == stackPenuh.top) break;
+		if (stackAlfabet.top == stackPenuh.top) break;
 		push(ch, stackalfabet);
 		if (ch == '*' || !isAlphabet(ch))
 		{
