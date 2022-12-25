@@ -22,14 +22,14 @@ void inOrder(Tree* current) {
     if (current != NULL) {
         inOrder(current->left);
         cout << " " << current->data;
-        preOrder(current->right);
+        inOrder(current->right);
     }
 }
 
 void postOrder(Tree* current) {
     if (current != NULL) {
-        inOrder(current->left);
-        preOrder(current->right);
+        postOrder(current->left);
+        postOrder(current->right);
         cout << " " << current->data;
     }
 }
