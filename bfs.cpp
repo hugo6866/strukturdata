@@ -134,4 +134,5 @@ int main() {
     addLeft(leaf->right, 5);
     addLeft(leaf->right->left, 6);
     bfs(leaf);
+    return 0;
 }
