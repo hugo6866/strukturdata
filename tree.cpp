@@ -39,7 +39,7 @@ void addRight(Tree* current, int data) {
         cout << "Sisi kanan sudah ada\n";
     }
     else {
-        nodeBaru = new Tree();
+        nodeBaru = new Tree();                                               
         nodeBaru->data = data;
         nodeBaru->left = NULL;
         nodeBaru->right = NULL;
@@ -69,15 +69,37 @@ Tree* createTree(int data) {
     return nodeBaru;
 }
 
+void print(Tree *current){
+    cout << "PreOrder : ";
+    preOrder(current);
+    cout << "\n";
+    cout << "InOrder : ";
+    inOrder(current);
+    cout << "\n";
+    cout << "PostOrder : ";
+    postOrder(current);
+}
+
 int main() {
 
-    leaf = createTree(5);
-    addLeft(leaf, 4);
-    addRight(leaf, 3);
-    preOrder(leaf);
-    cout << "\n";
-    inOrder(leaf);
-    cout << "\n";
-    postOrder(leaf);
+    leaf = createTree(7);
+    addLeft(leaf,1);
+    addRight(leaf,9);
+    
+    //left Side
+    addLeft(leaf->left,0);
+    addRight(leaf->left,3);
+    addRight(leaf->left->right,5);
+    addLeft(leaf->left->right,2);
+    addRight(leaf->left->right->right,6);
+    addLeft(leaf->left->right->left,4);
+    //right side
+    addRight(leaf->right,10);
+    addLeft(leaf->right,8);
+
+
+    print(leaf);
+   
     return 0;
 }
+

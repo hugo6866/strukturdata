@@ -177,7 +177,7 @@ void hapusBelakang() {
 		}
 		else {
 			head = NULL;
-		}
+		}                  `
 	}
 	else printf("Masih kosong\n");
 }
@@ -211,12 +211,11 @@ void tambahIndex(int index, string NIM, string nama, int umur) {
 	temp->umur = umur;
 	temp->next = NULL;
 	
-	if (index == 0) { // add to front
+	if (index == 0) { 
 		tambahDepan(NIM, nama, umur);
 		return;
 	}
 	
-	// find node at index
 	Mahasiswa* cur = head;
 	for (int i = 0; i < index - 1; i++) {
 		if (cur == NULL) { 
